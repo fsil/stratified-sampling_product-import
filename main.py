@@ -13,6 +13,6 @@ icr_zerokm = df_unique[(df_unique["product"] == "ICR") & (df_unique["lastodomete
 vhr_zeroage = df_unique[(df_unique["product"] == "VHR") & (df_unique["vehicleage"] == 0)]
 icr_zeroage = df_unique[(df_unique["product"] == "ICR") & (df_unique["vehicleage"] == 0)]
 
-final = df_unique.groupby(['product', 'import'], group_keys=False).apply(lambda x: x.sample(int(np.rint(N*len(x)/len(df_unique))))).sample(frac=1).reset_index(drop=True)
-print(final)
-final.to_csv(r'C:\Users\ACER\Desktop\export_dataframe.csv', index=False, header=True)
+m1 = df_unique.groupby(['product', 'import'], group_keys=False).apply(lambda x: x.sample(int(np.rint(N*len(x)/len(df_unique))))).sample(frac=1).reset_index(drop=True)#
+# print(final)
+# final.to_csv(r'C:\Users\ACER\Desktop\export_dataframe.csv', index=False, header=True)
